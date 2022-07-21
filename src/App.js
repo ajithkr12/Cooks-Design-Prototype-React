@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
 
+import './App.css';
+import  Main  from './pages/Main';
+import { Offers } from './pages/Offers';
 function App() {
+  const [value,setValue]=useState(2)
+  console.log('evide vannu app ---->',value)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Main value={value} setValue={setValue}/>
     </div>
+
+
+  //   <BrowserRouter>
+  //   <Routes>
+  //     <Route path="/" element={<Main value={value} setValue={setValue}/>}/>
+  //       <Route path="/offers" element={<Offers />} />
+      
+  //   </Routes>
+  // </BrowserRouter>
+
+    
   );
 }
 

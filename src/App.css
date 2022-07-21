@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+h1{
+  font-size: 74px;
+  color: rgb(255, 255, 255);
+  font-family: 'Inter', sans-serif;
+  font-weight: 1000;
+  letter-spacing: 6px;
+}
+p{
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-family: 'Inter', sans-serif;
+}
+h2{
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+h3{
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  
+}
+h4{
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container{
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  /* background-color: aqua; */
+  overflow: hidden;
+   position: relative;
+  background-image: url('./images/img1.png');
+  background-repeat: no-repeat;background-size: cover; background-position: center;
+ 
 }
+.row{
+  height: 100%;
+  padding: 0% 5% 2% 5%;
+  
+  /* background: rgba( 237, 131, 61, 0.7 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 8px );
+  -webkit-backdrop-filter: blur( 8px ); */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+background: rgba(237, 131, 61, 0.9);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
 }
+.a{
+  /* background-color: blueviolet; */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0%;
+}
+
+.b{
+  /* background-color: rgb(17, 160, 36); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  text-align: center;
+}
+.b img{
+  width: 80%;
+  border-radius: 50%;
+  border: 50px solid rgb(228,167,48,0.8);
+  
+}
+.c{
+  /* background-color: rgb(116, 146, 8); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.scroll-image-container{
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #7a6a43; */
+  height: 70%;
+  
+}
+.image-box{
+  /* background-color: #fccf64; */
+  width: 100%;
+  /* border-radius: 50%; */
 }
 
-.App-link {
-  color: #61dafb;
+.c img{
+  width: 70%;
+  border-radius: 50%;
+}
+.c img:hover{
+  transform: scale(1.2);
+  border: 6px solid rgb(170, 93, 5,0.4);
+}
+.image-button-container{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  flex-wrap: wrap;
+  padding: 5% 0%;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 200px;
+  height: 100%;
+  width: 50%;
+}
+.scroll-container{
+  /* text-align: center; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+/* background-color: #fccf64; */
+
+}
+.scroll-container p{
+
+  transform: rotate(90deg);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.scroll-container i {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+.scroll-container i {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-container{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #fccf64; */
+  
+}
+.nav-items{
+  display: flex;
+  gap: 30px;
+  font-weight: 400;
+}
+
+.nav-button button{
+  padding: 10px 35px;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 40px;
+  font-size:16px ;
+}
+.nav-button button:hover{
+  background-color: #ffffff;
+  color: rgba(237, 131, 61, 0.9);
 }
